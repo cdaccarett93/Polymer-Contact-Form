@@ -1,0 +1,16 @@
+{
+  "name": "contactForm",
+  "version": "2.0.0",
+  "authors": [
+    ""
+  ],
+  "private": true,
+  "dependencies": {
+    "polymer": "polymer/polymer#^2.0.0",
+    "paper-input": "^2.0.5",
+    "paper-button": "^2.0.0",
+    "iron-ajax": "^2.0.8"
+  },
+  "devDependencies": {
+  }
+}
