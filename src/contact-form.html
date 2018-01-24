@@ -25,6 +25,14 @@
         font-size: 14px;
         padding: 10px;
       }
+      .alert-success {
+        background: #a3f5ba;
+        border: 1px solid #0e7a2c;
+        border-radius: 3px;
+        color: #333;
+        font-size: 14px;
+        padding: 10px;
+      }
       input, textarea {
         position: relative; /* to make a stacking context */
         outline: none;
@@ -76,6 +84,8 @@
 
       <template is="dom-if" if="[[error]]">
                 <p class="alert-error"><strong>Error:</strong> [[error]]</p>
+      </template><template is="dom-if" if="[[success]]">
+                <p class="alert-success">[[success]]</p>
       </template>
   <h3 style="text-align: center">Let's Keep In Touch</h3>
   <paper-input-container>
@@ -159,8 +169,7 @@
       handleFormResponse(event) {
         var response = JSON.parse(event.detail.response);
         console.log(response);
-
-
+        this.success = 'Your message has been received.'
         // reset form data
         this.formData = {};
       }
